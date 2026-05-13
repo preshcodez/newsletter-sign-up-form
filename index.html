@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-[var(--Blue-700)] w-[375px] sm:w-[1440px]">
+    <div
+      class="w-full sm:w-[960px] sm:mx-auto sm:my-[150px] flex sm:flex-row flex-col bg-[var(--White)] sm:justify-between sm:p-[20px] rounded-[15px] items-center"
+    >
+      <img
+        src="./assets/images/illustration-sign-up-mobile.svg"
+        alt=""
+        class="sm:hidden block"
+      />
+      <div class="w-full sm:w-[50%] p-[30px] flex flex-col gap-6">
+        <div class="flex flex-col gap-[15px]">
+          <h1 class="text-[50px] font-bold text-[var(--Blue-800)]">
+            Stay updated!
+          </h1>
+          <p
+            class="font-normal text-[16px] text-[var(--Blue-700)] sm:text-[var(--Grey)]"
+          >
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="flex flex-col gap-2.5">
+            <div
+              class="flex gap-2.5 items-center text-[16px] text-[var(--Blue-700)] sm:text-[var(--Grey)] font-normal"
+            >
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </div>
+            <div
+              class="flex gap-2.5 items-center text-[16px] text-[var(--Blue-700)] sm:text-[var(--Grey)] font-normal"
+            >
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <div
+              class="flex gap-2.5 items-center text-[16px] text-[var(--Blue-700)] sm:text-[var(--Grey)] font-normal"
+            >
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </div>
+          </div>
+        </div>
+
+        <form action="" class="flex flex-col gap-[15px]">
+          <div class="flex flex-col gap-[5px] items-start">
+            <label class="text-[14px] font-bold text-[var(--Blue-800)]" for=""
+              >Email address</label
+            >
+            <input
+              type="email"
+              placeholder="email@company.com"
+              class="border-1 border-[var(--Grey)] w-full p-6 rounded-[10px] placeholder:text-[var(--Grey) placholder:text-[16px]] hover:border-[var(--Blue-800)] hover:text-[var(--Blue-800)] cursor-pointer"
+            />
+          </div>
+          <button
+            class="text-white font-bold p-6 rounded-[10px] cursor-pointer bg-[var(--Blue-800)]"
+            type="submit"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <!-- ==================================== -->
+      <img
+        src="./assets/images/illustration-sign-up-desktop.svg"
+        alt=""
+        class="hidden sm:block"
+      />
+    </div>
+
+    <!-- Success message start -->
+    <!-- Thanks for subscribing! A confirmation email has been sent to
+    ash@loremcompany.com. Please open it and click the button inside to confirm
+    your subscription. Dismiss message -->
+  </body>
+</html>
