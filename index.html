@@ -15,7 +15,7 @@
   </head>
   <body class="bg-[var(--Blue-700)] w-[375px] sm:w-[1440px]">
     <div
-      class="w-full sm:w-[960px] sm:mx-auto sm:my-[150px] flex sm:flex-row flex-col bg-[var(--White)] sm:justify-between sm:p-[20px] rounded-[15px] items-center"
+      class="w-full sm:w-[960px] sm:mx-auto sm:my-[150px] flex sm:flex-row flex-col bg-[var(--White)] sm:justify-between sm:p-[20px] rounded-[15px] items-center newsletter-card"
     >
       <img
         src="./assets/images/illustration-sign-up-mobile.svg"
@@ -54,12 +54,15 @@
           </div>
         </div>
 
-        <form action="" class="flex flex-col gap-[15px]">
+        <form action="" class="contactForm flex flex-col gap-[15px]">
           <div class="flex flex-col gap-[5px] items-start">
-            <label class="text-[14px] font-bold text-[var(--Blue-800)]" for=""
-              >Email address</label
-            >
-            <input
+            <div class="flex items-center justify-between w-full">
+              <label class="text-[14px] font-bold text-[var(--Blue-800)]" for=""
+              >Email address</label>
+              <span class="error-em hidden text-[14px] text-[var(--pink)]">Valid email required</span>
+            </div>
+            
+            <input id="email"
               type="email"
               placeholder="email@company.com"
               class="border-1 border-[var(--Grey)] w-full p-6 rounded-[10px] placeholder:text-[var(--Grey) placholder:text-[16px]] hover:border-[var(--Blue-800)] hover:text-[var(--Blue-800)] cursor-pointer"
@@ -81,10 +84,14 @@
         class="hidden sm:block"
       />
     </div>
+    <div id="success-message" class="hidden fixed inset-0 bg-[var(--White)] p-[30px] w-full sm:w-[400px] rounded-[20px]  mx-auto flex flex-col gap-[20px] justify-center">
+      <img src="assets/images/icon-success.svg" alt="success" class="w-[30px]">
+      <h1 class="text-[30px] leading-none font-bold">Thanks for <br> subscribing! </h1>
+      <p>A confirmation email has been sent to   <strong>ash@loremcompany.com.</strong> Please open it and click the button inside to confirm
+      your subscription. </p>
+      <button class="button bg-gradient-to-r from-[var(--orange)] to-[var(--pink)] p-6 rounded-[10px] text-[var(--White)] text-[18px] font-bold"> Dismiss message</button>
+    </div>
 
-    <!-- Success message start -->
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
+    <script src="main.js"></script>
   </body>
 </html>
